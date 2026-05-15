@@ -73,7 +73,6 @@ top_books = data.sort_values(by=['User Rating', 'Price'], ascending=False).head(
 
 st.title("📚 Análise de Livros Bestsellers da Amazon (2009 - 2019)")
 st.markdown("Este dashboard apresenta uma análise visual em Streamlit dos dados tratados via Pandas.")
-
 #metricas gerais
 def metric_card(label, value, color= "#FFFFFF"):
     st.markdown(
@@ -104,6 +103,8 @@ with col3:
  
 with col4: 
   metric_card('preço médio', f'U$ {preco_medio}')
+
+st.divider()
 
 #Dashboard
 tela1, tela2 = st.columns(2, border=True)
