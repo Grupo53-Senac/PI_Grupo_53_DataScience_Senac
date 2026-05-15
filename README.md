@@ -1,9 +1,9 @@
 # Projeto Integrador: Análise de Tendências dos Bestsellers Amazon (2009-2019)
 
 ## 1. Tema do Projeto
-Análise descritiva e identificação de tendências de mercado a partir do dataset de livros mais vendidos da Amazon (Top 50 anuais) no período de 2009 a 2019.
+Análise descritiva, identificação de tendências de mercado e desenvolvimento de painel gerencial a partir do dataset de livros mais vendidos da Amazon (Top 50 anuais) no período de 2009 a 2019.
 
-## 2. Integrantes
+## 2. Integrantes (Grupo 53)
 * MICHAEL DE SOUZA TEIXEIRA
 * KAUAN RIBEIRO TERUEL
 * FILIPE PINHEIRO
@@ -14,41 +14,60 @@ Análise descritiva e identificação de tendências de mercado a partir do data
 * JOAO PEDRO DE ALMEIDA ABREU
 
 ## 3. Objetivo da Análise
-O objetivo central deste projeto é realizar uma **análise descritiva** para compreender como o comportamento de consumo literário evoluiu ao longo do tempo. Buscamos identificar padrões e tendências, respondendo a perguntas como:
+O objetivo central deste projeto é realizar uma **análise descritiva** para compreender como o comportamento de consumo literário na Amazon evoluiu ao longo de uma década. Através da aplicação de ciência de dados, respondemos a dobras estratégicas do mercado:
 
-* **Preferência de Gênero:** Qual a preferência entre Ficção e Não-Ficção ao longo dos anos?
-* **Comportamento de Preços:** Qual a tendência dos preços médios dos bestsellers?
-* **Engajamento do Público:** Como o volume de avaliações (*Reviews*) cresceu ao longo do período?
-* **Fidelidade e Popularidade:** Quais autores conseguiram manter tendências de vendas consistentes por múltiplos anos?
+* **Preferência de Gênero:** Proporção e dominância entre Ficção e Não-Ficção ao longo dos anos.
+* **Comportamento de Preços:** Variação e evolução dos preços médios praticados pelos bestsellers.
+* **Engajamento do Público:** Volume acumulado de avaliações (*Reviews*) recebidas pelos títulos.
+* **Fidelidade e Popularidade:** Identificação dos autores recorrentes e livros de maior destaque.
 
-## 4. Planejamento das Tarefas
+---
 
-* **Design(Figma):** Criação de design de tela, para facilitar o desenvolvimento e tornar mais visivel o projeto
+## 4. Arquitetura do Dashboard e Funcionalidades
+Com a conclusão da Etapa 2, o projeto transformou os dados brutos em uma aplicação analítica utilizando **Streamlit**:
 
-* **Extração e Tratamento (Pandas):** Carregamento do arquivo `.csv`, limpeza de dados para evitar distorções nas métricas de tendência.
-* **Análise Descritiva:** Utilização de técnicas estatísticas (média, mediana, desvio padrão) para descrever o perfil dos dados ano a ano.
-* **Visualização:** Desenvolvimento de um dashboard interativo utilizando **Streamlit**.
 
-## 5. Cronograma Inicial
-* **Etapa 1 (Finalizado):** Entrega do planejamento e estruturação do repositório no GitHub.
-* **Etapa 2 (Finalizado):** Desenvolvimento do pipeline de dados (Pandas) e criação das visualizações de tendência no Streamlit.
+### 📊 Painel Principal de Insights
+1. **Cards de Métricas Gerais:** Exibição responsiva do total de registros, soma de reviews formatada, nota média global e preço médio do período filtrado.
+2. **Visão de Mercado (Gêneros):** Gráfico de pizza (*Pie Chart*) do Plotly mapeando a distribuição percentual das categorias.
+3. **Visão de Influência (Autores):** Gráfico de barras exibindo os 10 autores com maior recorrência no ranking.
+4. **Tendências Temporais:** Gráfico de linha nativo demonstrando a flutuação histórica de preços e gráfico de barras customizado com o *Top 10* livros mais bem avaliados e caros da plataforma.
 
-## 6. Metodologia e Ferramentas
-* **Figma:** Design profissional de telas
-* **Python & Pandas:** Manipulação principal e cálculos estatísticos.
-* **Streamlit:** Interface de exibição dos insights e gráficos de tendência.
+---
 
-## 7. Estrutura do Dataset
-O dataset original contém as seguintes colunas:
+## 5. Metodologia e Ferramentas
+* **Figma:** Concepção do Mockup e UI/UX design das telas para guiar o desenvolvimento visual.
+* **Python & Pandas:** Limpeza, transformação, tratamento de dados e otimização de performance com cache de dados (`@st.cache_data`).
+* **Plotly Express:** Construção de gráficos dinâmicos, responsivos e dotados de *tooltips* informativas.
+* **Streamlit & Streamlit Cloud:** Framework para a interface web corporativa e infraestrutura para hospedagem pública do app.
+
+---
+
+## 6. Estrutura do Dataset Local
+O arquivo `bestsellers.csv` consumido pela aplicação contém:
 * `Name`: Título do livro.
 * `Author`: Autor da obra.
-* `User Rating`: Avaliação média dos usuários (0-5).
+* `User Rating`: Avaliação média dos usuários (0 a 5).
 * `Reviews`: Número de avaliações recebidas.
-* `Price`: Preço de venda na plataforma.
+* `Price`: Preço de venda na plataforma (U$).
 * `Year`: Ano em que o livro figurou no ranking.
-* `Genre`: Categoria (Fiction / Non Fiction).
+* `Genre`: Categoria original (*Fiction* / *Non Fiction*).
 
-O dashboard foca na visualização de tendências através de:
-1. **Painel Temporal:** Gráficos de barras mostrando os livros mais bem avaliados, top autores do periodo e evolução do preço médio e do volume de reviews por ano.
-2. **Comparativo de Gêneros:** Gráficos de pizza para mostrar a variação da fatia de mercado entre Ficção e Não-Ficção.
-3. **Destaque de Autores:** Ranking dos autores mais influentes da década com base na recorrência no topo das vendas.
+---
+
+## 7. Status do Cronograma
+* **Etapa 1 (Concluído):** Planejamento, design de telas no Figma e estruturação inicial do repositório.
+* **Etapa 2 (Concluído):** Desenvolvimento do pipeline em Pandas, Design e estilo com Streamlit, HTML/CSS renderização dos gráficos do Plotly e publicação (*deploy*) no Streamlit Community Cloud.
+
+---
+
+## 8. Como Executar o Projeto Localmente
+
+Se quiser rodar o dashboard na sua máquina, siga os passos abaixo:
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/Grupo53-Senac/PI_Grupo_53_DataScience_Senac
+   cd seu-repositorio
+   pip install -r requirements.txt
+   streamlit run main.py
