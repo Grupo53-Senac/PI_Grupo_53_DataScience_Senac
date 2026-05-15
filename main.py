@@ -79,7 +79,8 @@ def metric_card(label, value, color= "#FFFFFF"):
         f"""
         <div style="
             background-color: #FF8C00; 
-            padding: 20px; 
+            padding: 20px;
+            margin-top: 5px; 
             border-radius: 10px; 
             border-left: 5px solid {color};
             text-align: center;
