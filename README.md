@@ -16,8 +16,8 @@ Análise descritiva e identificação de tendências de mercado a partir do data
 ## 3. Objetivo da Análise
 O objetivo central deste projeto é realizar uma **análise descritiva** para compreender como o comportamento de consumo literário evoluiu ao longo do tempo. Buscamos identificar padrões e tendências, respondendo a perguntas como:
 
-* **Preferência de Gênero:** Houve uma mudança na predominância entre Ficção e Não-Ficção ao longo dos anos?
-* **Comportamento de Preços:** Qual a tendência dos preços médios dos bestsellers? Livros de ficção tendem a ser mais caros?
+* **Preferência de Gênero:** Qual a preferência entre Ficção e Não-Ficção ao longo dos anos?
+* **Comportamento de Preços:** Qual a tendência dos preços médios dos bestsellers?
 * **Engajamento do Público:** Como o volume de avaliações (*Reviews*) cresceu ao longo do período?
 * **Fidelidade e Popularidade:** Quais autores conseguiram manter tendências de vendas consistentes por múltiplos anos?
 
@@ -26,18 +26,16 @@ O objetivo central deste projeto é realizar uma **análise descritiva** para co
 * **Design(Figma):** Criação de design de tela, para facilitar o desenvolvimento e tornar mais visivel o projeto
 
 * **Extração e Tratamento (Pandas):** Carregamento do arquivo `.csv`, limpeza de dados para evitar distorções nas métricas de tendência.
-* **Armazenamento (SQLite):** Exportação da base de dados limpa e transformada para um banco de dados **SQLite**, garantindo a organização dos dados e permitindo consultas SQL estruturadas.
 * **Análise Descritiva:** Utilização de técnicas estatísticas (média, mediana, desvio padrão) para descrever o perfil dos dados ano a ano.
 * **Visualização:** Desenvolvimento de um dashboard interativo utilizando **Streamlit**.
 
 ## 5. Cronograma Inicial
 * **Etapa 1 (Finalizado):** Entrega do planejamento e estruturação do repositório no GitHub.
-* **Etapa 2 (Em andamento):** Desenvolvimento do pipeline de dados (Pandas -> SQLite) e criação das visualizações de tendência no Streamlit.
+* **Etapa 2 (Finalizado):** Desenvolvimento do pipeline de dados (Pandas) e criação das visualizações de tendência no Streamlit.
 
 ## 6. Metodologia e Ferramentas
 * **Figma:** Design profissional de telas
 * **Python & Pandas:** Manipulação principal e cálculos estatísticos.
-* **SQLite:** Persistência dos dados para consultas eficientes e integridade da informação.
 * **Streamlit:** Interface de exibição dos insights e gráficos de tendência.
 
 ## 7. Estrutura do Dataset
@@ -50,12 +48,7 @@ O dataset original contém as seguintes colunas:
 * `Year`: Ano em que o livro figurou no ranking.
 * `Genre`: Categoria (Fiction / Non Fiction).
 
-## 8. Ideia Inicial do Dashboard
-O dashboard focará na visualização de tendências. Abaixo está o protótipo da primeira interface planejada (Sujeito a mudaças):
-
-![Protótipo do Dashboard](assets/design-tela-1.png)
-
-O dashboard focará na visualização de tendências através de:
+O dashboard foca na visualização de tendências através de:
 1. **Painel Temporal:** Gráficos de barras mostrando os livros mais bem avaliados, top autores do periodo e evolução do preço médio e do volume de reviews por ano.
 2. **Comparativo de Gêneros:** Gráficos de pizza para mostrar a variação da fatia de mercado entre Ficção e Não-Ficção.
 3. **Destaque de Autores:** Ranking dos autores mais influentes da década com base na recorrência no topo das vendas.
