@@ -61,11 +61,15 @@ O arquivo `bestsellers.csv` consumido pela aplicação contém:
 
 ---
 
-## 8. Como Executar o Projeto Localmente
+## 8. Como Executar o Projeto
 
-Se quiser rodar o dashboard na sua máquina, siga os passos abaixo:
+**1. Acesso online na Streamlit Cloud:**
 
-1. **Clone o repositório:**
+https://top-amazon-books.streamlit.app/
+
+Ou, se quiser rodar o dashboard na sua máquina, siga os passos abaixo:
+
+ **2. Clone o repositório:**
    ```bash
    git clone https://github.com/Grupo53-Senac/PI_Grupo_53_DataScience_Senac
    cd seu-repositorio
