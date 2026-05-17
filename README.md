@@ -61,7 +61,18 @@ O arquivo `bestsellers.csv` consumido pela aplicação contém:
 
 ---
 
-## 8. Como Executar o Projeto
+## 8. Fotos do Projeto
+
+Abaixo estão algumas capturas de tela do dashboard em funcionamento, demonstrando a interface da aplicação e a visualização das análises realizadas.
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/39d643c7-b5ad-4a6e-9abf-ea267d204ed9" width="420px" />
+  <img src="https://github.com/user-attachments/assets/fe39ee5e-1eb5-4c4a-b9b0-8bf8f56fdc6e" width="420px" />
+</div>
+
+---
+
+## 9. Como Executar o Projeto
 
 **1. Acesso online na Streamlit Cloud:**
 
@@ -75,3 +86,4 @@ Ou, se quiser rodar o dashboard na sua máquina, siga os passos abaixo:
    cd seu-repositorio
    pip install -r requirements.txt
    streamlit run main.py
+
